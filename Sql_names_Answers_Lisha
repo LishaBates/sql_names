@@ -1,0 +1,19 @@
+All data pulled from google big query
+
+1. SELECT * FROM `bigquery-public-data.usa_names.usa_1910_current`
+answer 6311504
+
+2. SELECT sum (number) FROM `bigquery-public-data.usa_names.usa_1910_current`
+answer 319731698
+
+3. SELECT name, year, number  FROM `bigquery-public-data.usa_names.usa_1910_current` order by number desc
+answer  Robert 1947 10026
+
+4. SELECT distinct year FROM `bigquery-public-data.usa_names.usa_1910_current`
+answer 1910 - 2021
+
+5 SELECT sum (number), year
+FROM `bigquery-public-data.usa_names.usa_1910_current`
+group by year, number
+order by number desc
+answer - 4003066 1957 
